@@ -177,7 +177,7 @@ export default {
     .google-map {
     width: 80vw;
     height: 80vh;
-    margin: 0 auto;
+    margin: 20px auto;
     background: gray;
     }
 

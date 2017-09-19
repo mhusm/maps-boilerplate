@@ -11,7 +11,9 @@
      <!-- route outlet -->
      <!-- component matched by the route will render here -->
      <router-view></router-view>
-     <a href="https://www.contentful.com/" rel="nofollow" target=“_blank” id="contentful"><img src="https://images.contentful.com/fo9twyrwpveg/44baP9Gtm8qE2Umm8CQwQk/c43325463d1cb5db2ef97fca0788ea55/PoweredByContentful_LightBackground.svg" alt="Powered by Contentful" width="100px" /></a>
+     <div >
+       <a href="https://www.contentful.com/" rel="nofollow" target=“_blank” ><img src="https://images.contentful.com/fo9twyrwpveg/44baP9Gtm8qE2Umm8CQwQk/c43325463d1cb5db2ef97fca0788ea55/PoweredByContentful_LightBackground.svg" alt="Powered by Contentful" width="100px" /></a>
+     </div>
 
   </div>
 </template>
@@ -54,15 +56,9 @@ a {
   color: #42b983;
 }
 
-
-#contentful {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
 .router-link-exact-active {
     font-weight: bold;
 }
+
 
 </style>
