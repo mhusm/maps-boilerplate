@@ -20,8 +20,7 @@ export default {
         };
     },
     mounted: function () {
-        contentfulClient.getEntry(this.id, {include:10}
-        )
+        contentfulClient.getEntry(this.id)
         .then(entry => {
             console.log(entry);
             this.title = entry.fields.title;
@@ -47,18 +46,6 @@ export default {
             console.error(error);
         
         });
-
-      
-      
-    },
-    watch: {
-        // whenever style changes, this function will run
-        mapstyle: function (newStyle) {
-            this.setStyle();
-         }
-    },
-    methods: {
-
     }
 }
 </script>
