@@ -26,5 +26,6 @@
     "vue-template-compiler": "^2.3.3",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
-  }
+  },
+  "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress"
 }
