@@ -7,7 +7,7 @@
         </img>
     </div>
 </template>
-<<script>
+<script>
 export default {
   name: 'details-page',
     props: [ 'id'],
