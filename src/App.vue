@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-     <h1>Bike Spotting V1.0</h1>
+     <h1>Bike Spotting V1.2</h1>
       <p>
          <!-- use router-link component for navigation. -->
          <!-- specify the link by passing the `to` prop. -->
