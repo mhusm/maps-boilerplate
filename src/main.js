@@ -7,6 +7,13 @@ import InfoWindow from './components/info-window.vue'
 import DetailsPage from './components/details-page.vue'
 import AboutPage from './components/about-page.vue'
 
+require('./assets/foundation/css/foundation.css');
+require('./assets/css/demo.scss');
+require('./assets/foundation/js/vendor/what-input.js');
+require('./assets/foundation/js/vendor/foundation.js');
+require('./assets/foundation/js/app.js');
+
+
 window.contentfulClient = contentful.createClient({
   accessToken: '64d6a750c7ae5a7c93603911e56166b198ce5ab94be05261848e8a280ba8972c',
   space: '7la5sjify8om'

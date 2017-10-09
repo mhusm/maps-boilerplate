@@ -1,5 +1,11 @@
 var path = require('path')
 var webpack = require('webpack')
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+const extractSass = new ExtractTextPlugin({
+    filename: "[name].css",
+    disable: process.env.NODE_ENV === "development"
+});
 
 module.exports = {
   entry: './src/main.js',
@@ -30,7 +36,23 @@ module.exports = {
         options: {
           name: '[name].[ext]?[hash]'
         }
-      }
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
+      },
+      {
+        test: /\.scss$/,
+        use: extractSass.extract({
+            use: [{
+                loader: "css-loader"
+            }, {
+                loader: "sass-loader"
+            }],
+            // use style-loader in development
+            fallback: "style-loader"
+        })
+    }
     ]
   },
   resolve: {
@@ -45,8 +67,19 @@ module.exports = {
   performance: {
     hints: false
   },
+  plugins: [
+    extractSass,
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery"
+    })
+  ],
   devtool: '#eval-source-map'
 }
+
+
+
 
 if (process.env.NODE_ENV === 'production') {
   module.exports.devtool = '#source-map'
