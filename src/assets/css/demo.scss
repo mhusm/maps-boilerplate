@@ -1,0 +1,53 @@
+// demo styles
+$primary-color: #6deb88;
+$secondary-color: #767676;
+$light-gray: #e6e6e6;
+
+body {
+  padding: 2rem;
+}
+
+button {
+    background: $light-gray;
+}
+
+.row {
+  background: $light-gray;
+  margin-bottom: 1rem;
+}
+
+.column,
+.columns {
+  background: $secondary-color;
+  border: 5px solid black;
+  
+  span {
+    background: $primary-color;
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.callout {
+  background: $primary-color;
+  text-align: center;
+}
+
+.box {
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  
+  &.blue {
+    background: $primary-color;
+  }
+  
+  &.gray {
+    background: $secondary-color;
+  }
+  
+  &.black {
+    background: #000;
+  }
+}

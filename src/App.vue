@@ -11,6 +11,39 @@
      <!-- route outlet -->
      <!-- component matched by the route will render here -->
      <router-view></router-view>
+
+    <div class="row">
+      <div class="small-2 large-4 columns"><span>CONTENT</span></div>
+      <div class="small-4 large-4 columns"><span>CONTENT</span></div>
+      <div class="small-6 large-4 columns"><span>CONTENT</span></div>
+    </div>
+    <div class="row">
+      <div class="large-3 columns"><span>CONTENT</span></div>
+      <div class="large-6 columns"><span>CONTENT</span></div>
+      <div class="large-3 columns"><span>CONTENT</span></div>
+    </div>
+    <div class="row">
+      <div class="small-6 large-2 columns"><span>CONTENT</span></div>
+      <div class="small-6 large-8 columns"><span>CONTENT</span></div>
+      <div class="small-12 large-2 columns"><span>CONTENT</span></div>
+    </div>
+    <div class="row">
+      <div class="small-3 columns"><span>CONTENT</span></div>
+      <div class="small-9 columns"><span>CONTENT</span></div>
+    </div>
+    <div class="row">
+      <div class="large-4 columns"><span>CONTENT</span></div>
+      <div class="large-8 columns"><span>CONTENT</span></div>
+    </div>
+    <div class="row">
+      <div class="small-6 large-5 columns"><span>CONTENT</span></div>
+      <div class="small-6 large-7 columns"><span>CONTENT</span></div>
+    </div>
+    <div class="row">
+      <div class="large-6 columns"><span>CONTENT</span></div>
+      <div class="large-6 columns"><span>CONTENT</span></div>
+    </div>
+
      <div >
        <a href="https://www.contentful.com/" rel="nofollow" target=“_blank” ><img src="https://images.contentful.com/fo9twyrwpveg/44baP9Gtm8qE2Umm8CQwQk/c43325463d1cb5db2ef97fca0788ea55/PoweredByContentful_LightBackground.svg" alt="Powered by Contentful" width="100px" /></a>
      </div>
