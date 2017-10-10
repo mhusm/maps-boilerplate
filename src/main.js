@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import * as contentful from 'contentful'
+import {createClient} from 'contentful'
 import VueRouter from 'vue-router'
 import GoogleMaps from './components/google-maps.vue'
 import InfoWindow from './components/info-window.vue'
@@ -15,7 +15,7 @@ import './assets/foundation/js/vendor/foundation.js'
 // Load Foundation
 $(document).foundation();
 
-window.contentfulClient = contentful.createClient({
+window.contentfulClient = createClient({
   accessToken: '64d6a750c7ae5a7c93603911e56166b198ce5ab94be05261848e8a280ba8972c',
   space: '7la5sjify8om'
 })
