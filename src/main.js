@@ -8,7 +8,7 @@ import DetailsPage from './components/details-page.vue'
 import AboutPage from './components/about-page.vue'
 
 import './assets/foundation/css/foundation.css'
-import './assets/css/demo.scss'
+import './assets/css/style.scss'
 import './assets/foundation/js/vendor/what-input.js'
 import './assets/foundation/js/vendor/foundation.js'
 
