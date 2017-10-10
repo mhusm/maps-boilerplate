@@ -1,11 +1,5 @@
 var path = require('path')
 var webpack = require('webpack')
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
-const extractSass = new ExtractTextPlugin({
-    filename: "[name].css",
-    disable: process.env.NODE_ENV === "development"
-});
 
 module.exports = {
   entry: './src/main.js',
@@ -39,28 +33,18 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: extractSass.extract({
-          use: [{
-              loader: "css-loader"
-          }, {
-              loader: "sass-loader"
-          }],
-          // use style-loader in development
-          fallback: "style-loader"
-      })
-    },
+        use: [ 'style-loader', 'css-loader' ]
+      },
       {
         test: /\.scss$/,
-        use: extractSass.extract({
-            use: [{
-                loader: "css-loader"
-            }, {
-                loader: "sass-loader"
-            }],
-            // use style-loader in development
-            fallback: "style-loader"
-        })
-    }
+        use: [{
+            loader: "style-loader" // creates style nodes from JS strings
+        }, {
+            loader: "css-loader" // translates CSS into CommonJS
+        }, {
+            loader: "sass-loader" // compiles Sass to CSS
+        }]
+      }
     ]
   },
   resolve: {
@@ -76,7 +60,6 @@ module.exports = {
     hints: false
   },
   plugins: [
-    extractSass,
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",
