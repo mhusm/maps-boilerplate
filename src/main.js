@@ -11,7 +11,9 @@ import './assets/foundation/css/foundation.css'
 import './assets/css/demo.scss'
 import './assets/foundation/js/vendor/what-input.js'
 import './assets/foundation/js/vendor/foundation.js'
-import './assets/foundation/js/app.js'
+
+// Load Foundation
+$(document).foundation();
 
 window.contentfulClient = contentful.createClient({
   accessToken: '64d6a750c7ae5a7c93603911e56166b198ce5ab94be05261848e8a280ba8972c',
