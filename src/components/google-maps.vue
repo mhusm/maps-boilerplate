@@ -60,7 +60,7 @@ export default {
                 //create marker
                 let icon = item.fields.icon? item.fields.icon.fields.file : "";
                 let marker =  new google.maps.Marker({
-                    position: {lat: item.fields.lat, lng: item.fields.lng},
+                    position: {lat: item.fields.location.lat, lng: item.fields.location.lon},
                     icon: icon
                     
                 });
